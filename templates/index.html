@@ -1,37 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disease Prediction</title>
+    <title>ML Mapper</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
-<body>
-    <h1>Disease Prediction</h1>
-    <form id="prediction-form">
-        <label for="symptom">Enter Symptom:</label>
-        <input type="text" id="symptom" name="symptom">
-        <button type="submit">Predict</button>
-    </form>
-    <div id="result"></div>
 
-    <script>
-        document.getElementById('prediction-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const symptom = document.getElementById('symptom').value;
-            
-            fetch('/predict', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ symptom: symptom })
-            })
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById('result').innerText = 'Predicted Disease: ' + data.disease;
-            })
-            .catch(error => console.error('Error:', error));
-        });
-    </script>
+<body>
+    <header class="navbar">
+        <div class="container">
+            <h1>ProActive Health</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Features</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Welcome to Procative Health</h2>
+            <p>Predict possible diseases with our machine learning model integrated with an interactive web interface.</p>
+            <a href="/tool" class="btn-primary">Get Started</a>
+
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2>Our Features</h2>
+            <div class="feature-cards">
+                <div class="card">
+                    <h3>Easy Input</h3>
+                    <p>Input symptoms quickly and get immediate insights into potential health conditions.</p>
+                </div>
+                <div class="card">
+                    <h3>Accurate Predictions</h3>
+                    <p>Powered by advanced machine learning algorithms to deliver reliable results.</p>
+                </div>
+                <div class="card">
+                    <h3>Secure and Private</h3>
+                    <p>Your data is handled with utmost care, ensuring privacy and security.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 ML Mapper. All rights reserved.</p>
+            <p>Designed with ❤️ by Your Name</p>
+        </div>
+    </footer>
 </body>
+
 </html>
