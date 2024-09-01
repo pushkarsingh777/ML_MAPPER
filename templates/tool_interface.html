@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tool Interface - ML Mapper</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="/static//styles.css">
 </head>
 
 <body>
     <header class="navbar">
         <div class="container">
-            <h1>ML Mapper Tool</h1>
+            <h1>Disease Predictor</h1>
             <nav>
                 <ul>
                     <li><a href="/">Home</a></li>
@@ -22,13 +22,15 @@
     </header>
 
     <section class="tool-interface">
-        <div class="container">
+        <div class="tool-interface-container">
             <h2>Welcome to the Tool Interface</h2>
             <p>Use this interface to input your symptoms and get a prediction of potential health conditions.</p>
             <form class="input-form" action="/predict" method="POST">
                 <label for="symptoms">Enter Symptoms:</label>
-                <input type="text" id="symptoms" name="symptoms" placeholder="e.g., fever, cough, headache" required>
-                <button type="submit" class="btn-submit">Predict</button>
+                <div>
+                    <input type="text" id="symptoms" name="symptoms" placeholder="e.g., fever, cough, headache" required>
+                    <button type="submit" class="btn-submit">Predict</button>
+                </div>
             </form>
             
             {% if prediction %}
@@ -41,7 +43,7 @@
     </section>
 
     <footer class="footer">
-        <div class="container">
+        <div class="">
             <p>© 2024 ML Mapper. All rights reserved.</p>
         </div>
     </footer>
