@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -16,7 +16,7 @@ body {
   justify-content: space-between;
 }
 
-/* Navbar */
+
 .navbar {
   background: #2d2743;
   padding: 1rem 0;
@@ -44,7 +44,7 @@ body {
   margin-left: 10px;
 }
 
-/* Hero Section */
+
 .hero {
   background: url("https://source.unsplash.com/1600x900/?health,technology")
     no-repeat center center/cover;
@@ -79,7 +79,7 @@ body {
   background: #e91e63;
 }
 
-/* Features Section */
+
 .features {
   padding: 50px 20px;
   background: #fff;
@@ -111,7 +111,7 @@ body {
   color: #6200ea;
 }
 
-/* Footer */
+
 .footer {
   background: #333;;
   color: #fff;
@@ -127,7 +127,7 @@ body {
   margin: 5px 0;
 }
 
-/* Tool Interface Page Styling */
+
 .tool-interface {
   padding: 50px 20px;
   background-color: #f9f9f9;
