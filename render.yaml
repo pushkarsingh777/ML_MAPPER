@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: your-service-name
+    repo: https://github.com/your/repo
+    build:
+      command: |
+        python setup_nltk.py
+       
+    start:
+      command: gunicorn app:app  # Replace with your start command
